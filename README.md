@@ -17,4 +17,4 @@
 
 
 ## Screenshot
-![Landing Page](assets/LandingPage.png)
+![Landing Page](assets/LandingPage.PNG)
