@@ -5,7 +5,9 @@ const Landing = () => {
     return (
         <>
             <LandingHeading />
-            <StocksTable />
+            <div class="container mx-auto flex items-center">
+                <StocksTable />
+            </div>
         </>
     )
 }

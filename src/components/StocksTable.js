@@ -40,26 +40,28 @@ const StocksTable = () => {
 
     const cryptoArray = [bitcoin, solana, ethereum];
     return (
-        <div className="stocks-table">
-            <table className="table-auto">
-                <thead>
+        <div className="stocks-table text-left w-full">
+            <table class="table-auto border-collapse border w-full rounded">
+                <thead class="">
                     <tr>
-                        <th className="px-4 py-2">Crypto</th>
-                        <th className="px-4 py-2">Price</th>
+                        <th class="p-2">Crypto</th>
+                        <th class="p-2 text-right">Price</th>
+                        <th class="p-2 text-right">Last Refresh</th>
                     </tr>
                 </thead>
                 <tbody>
                     {cryptoArray.map((crypto) => {
                         return (
-                            <tr>
-                                <td className="border px-4 py-2">{crypto ? crypto['2. From_Currency Name'] : '...Loading'}</td>
-                                <td className="border px-4 py-2">{crypto ? crypto['5. Exchange Rate'] : '...Loading'}</td>
+                            <tr class="border">
+                                <td class=" px-4 py-2  flex"><img class="mr-3 w-7" src={`https://cryptologos.cc/logos/thumbs/${crypto['2. From_Currency Name'].toLowerCase()}.png?v=018`}></img>{crypto ? crypto['2. From_Currency Name'] : '...Loading'}</td>
+                                <td class=" px-4 py-2  text-right">{crypto ? `£${crypto['5. Exchange Rate']}` : '...Loading'}</td>
+                                <td class=" px-4 py-2  text-right">{crypto ? crypto['6. Last Refreshed'] : '...Loading'}</td>
                             </tr>
                         )
                     })}
                 </tbody>
             </table>
-        </div>
+        </div >
     )
 }
 
