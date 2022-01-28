@@ -53,7 +53,7 @@ const StocksTable = () => {
                     {cryptoArray.map((crypto) => {
                         return (
                             <tr class="border">
-                                <td class=" px-4 py-2  flex"><img class="mr-3 w-7" src={`https://cryptologos.cc/logos/thumbs/${crypto['2. From_Currency Name'].toLowerCase()}.png?v=018`}></img>{crypto ? crypto['2. From_Currency Name'] : '...Loading'}</td>
+                                <td class=" px-4 py-2  flex">{crypto ? <img class="mr-3 w-7" src={`https://cryptologos.cc/logos/thumbs/${crypto['2. From_Currency Name'].toLowerCase()}.png?v=018`}></img> : <></>}{crypto ? crypto['2. From_Currency Name'] : '...Loading'}</td>
                                 <td class=" px-4 py-2  text-right">{crypto ? `£${crypto['5. Exchange Rate']}` : '...Loading'}</td>
                                 <td class=" px-4 py-2  text-right">{crypto ? crypto['6. Last Refreshed'] : '...Loading'}</td>
                             </tr>
